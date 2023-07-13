@@ -1,8 +1,8 @@
-package com.example.mvvmapp.model
+package com.example.mvvmapp.data.model
 
 class QuoteProvider {
     companion object {
-        fun random(): QuoteModel{
+        fun random(): QuoteModel {
             val position = (0..10).random()
             return quote[position]
         }

@@ -1,9 +1,9 @@
-package com.example.mvvmapp.viewmodel
+package com.example.mvvmapp.ui.viewmodel
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.example.mvvmapp.model.QuoteModel
-import com.example.mvvmapp.model.QuoteProvider
+import com.example.mvvmapp.data.model.QuoteModel
+import com.example.mvvmapp.data.model.QuoteProvider
 
 class QuoteViewModel: ViewModel() {
     val  quoteModel = MutableLiveData<QuoteModel>()
