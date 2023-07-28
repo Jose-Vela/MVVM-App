@@ -59,4 +59,17 @@ class QuoteViewModelTest {
             // Then
             assert(quoteViewModel.quoteModel.value == quoteList.first())
         }
+
+    @Test
+    fun `when randomQuoteUseCase return a quote set on the livedata`() = runTest {
+        // Given
+        val quote = Quote("Hola de nuevo :)", "José Eloy")
+        coEvery { getRandomQuoteUseCase() } returns quote
+
+        // When
+        quoteViewModel.randomQuote()
+
+        // Then
+        assert(quoteViewModel.quoteModel.value == quote)
+    }
 }
