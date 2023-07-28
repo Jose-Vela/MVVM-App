@@ -72,4 +72,19 @@ class QuoteViewModelTest {
         // Then
         assert(quoteViewModel.quoteModel.value == quote)
     }
+
+    @Test
+    fun `if randomQuoteUseCase return null keep the last value`() = runTest{
+        // Given
+        val quote = Quote("Tercer Test", "José Vela")
+        quoteViewModel.quoteModel.value = quote
+        coEvery { getRandomQuoteUseCase() } returns null
+
+        // When
+        quoteViewModel.randomQuote()
+
+        // Then
+        assert(quoteViewModel.quoteModel.value == quote)
+    }
+
 }
