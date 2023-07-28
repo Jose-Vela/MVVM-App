@@ -9,7 +9,7 @@ import kotlinx.coroutines.runBlocking
 import org.junit.Before
 import org.junit.Test
 
-internal class GetRandomQuoteUseCaseTest{
+class GetRandomQuoteUseCaseTest{
 
     @RelaxedMockK
     private lateinit var quoteRepository: QuoteRepository
