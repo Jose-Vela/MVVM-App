@@ -3,18 +3,22 @@ package com.example.mvvmapp.ui.viewmodel
 import androidx.arch.core.executor.testing.InstantTaskExecutorRule
 import com.example.mvvmapp.domain.GetQuotesUseCase
 import com.example.mvvmapp.domain.GetRandomQuoteUseCase
+import com.example.mvvmapp.domain.model.Quote
 import io.mockk.MockKAnnotations
+import io.mockk.coEvery
 import io.mockk.impl.annotations.RelaxedMockK
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.test.resetMain
+import kotlinx.coroutines.test.runTest
 import kotlinx.coroutines.test.setMain
 import org.junit.After
 import org.junit.Before
 import org.junit.Rule
+import org.junit.Test
 
 @ExperimentalCoroutinesApi
-class QuoteViewModelTest{
+class QuoteViewModelTest {
 
     @RelaxedMockK
     private lateinit var getQuotesUseCase: GetQuotesUseCase
@@ -40,4 +44,19 @@ class QuoteViewModelTest{
     fun onAfter() {
         Dispatchers.resetMain()
     }
+
+    @Test
+    fun `when viewmodel is created at the first time, get all quotes and set the first value`() =
+        runTest {
+            // Given
+            val quoteList =
+                listOf(Quote("Hola", "José Eloy"), Quote("Primer Test ViewModel", "José Vela"))
+            coEvery { getQuotesUseCase() } returns quoteList
+
+            // When
+            quoteViewModel.onCreate()
+
+            // Then
+            assert(quoteViewModel.quoteModel.value == quoteList.first())
+        }
 }
