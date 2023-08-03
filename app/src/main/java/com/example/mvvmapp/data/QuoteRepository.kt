@@ -1,19 +1,35 @@
 package com.example.mvvmapp.data
 
+import com.example.mvvmapp.data.database.dao.QuoteDao
+import com.example.mvvmapp.data.database.entities.QuoteEntity
 import com.example.mvvmapp.data.model.QuoteModel
-import com.example.mvvmapp.data.model.QuoteProvider
 import com.example.mvvmapp.data.network.QuoteService
+import com.example.mvvmapp.domain.model.Quote
+import com.example.mvvmapp.domain.model.toDomain
+import javax.inject.Inject
 
-class QuoteRepository {
+class QuoteRepository @Inject constructor(
+    private val api: QuoteService,
+    private val quoteDao: QuoteDao
+) {
 
-    private val api = QuoteService()
-
-    suspend fun getAllQuotes():List<QuoteModel>{
+    suspend fun getAllQuotesFromApi(): List<Quote> {
         // Llamaos al backend recuperando el listado total de las citas
         val response: List<QuoteModel> = api.getQuotes()
-        // Almacenamos en memoria (a modo de "base de datos") la respuesta (response) del servidor/backend, en la variable QuoteProvider.quotes
-        QuoteProvider.quotes = response
         // Retornamos la respuesta
-        return response
+        return response.map { it.toDomain() }   // Mapeamos el resultado a tipo Quote
+    }
+
+    suspend fun getAllQuotesFromDatabase(): List<Quote>{
+        val response: List<QuoteEntity> = quoteDao.getAllQuotes()
+        return response.map { it.toDomain() }
+    }
+
+    suspend fun insertQuotes(quotes: List<QuoteEntity>){
+        quoteDao.insertAll(quotes)
+    }
+
+    suspend fun clearQuotes(){
+        quoteDao.deleteAllQuotes()
     }
 }

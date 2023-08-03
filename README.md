@@ -1,7 +1,6 @@
 # MVVM-App
 
-Proyecto MVVM para Android en Kotlin, obtenido de los capítulos de [cursokotlin.com](https://cursokotlin.com/).
-Cada rama pertenece a un capítulo, el cual se explica a fondo en los tutoriales por escrito o por video.
+Proyecto MVVM para Android en Kotlin, obtenido de los capítulos de [cursokotlin.com](https://cursokotlin.com/). Cada rama pertenece a un capítulo, el cual se explica a fondo en los tutoriales por escrito o por video.
 En la rama [__Main__](https://github.com/Jose-Vela/MVVM-App/tree/main) se encuentra la última versión del proyecto.
 
 _Para acceder a los tutoriales por escrito deberás dar clic en el enlace al inicio de cada tema o en el icono :page_facing_up: y para el tutorial en video sobre el icono :video_camera:_
