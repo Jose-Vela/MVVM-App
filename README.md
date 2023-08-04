@@ -11,7 +11,6 @@ _Para acceder a los tutoriales por escrito deberás dar clic en el enlace al ini
 
 - [Dagger Hilt - Inyección de Dependencias](https://cursokotlin.com/dagger-hilt-inyeccion-de-dependencias-mvvm/) [:page_facing_up:](https://cursokotlin.com/dagger-hilt-inyeccion-de-dependencias-mvvm/) [:video_camera:](https://youtu.be/t6ZuzSu2UHI) - Tercera versión de MVVM, se ha añadido inyección de dependencias en todo el proyecto con Dagger Hilt. Código en la rama: [__feature/daggerHilt__](https://github.com/Jose-Vela/MVVM-App/tree/feature/daggerHilt)
 
-- [Clean Architecture + Retrofit y corrutinas ](https://cursokotlin.com/mvvm-en-android-con-kotlin-implementando-retrofit-corrutinas-y-clean-architecture/) [:page_facing_up:](https://cursokotlin.com/mvvm-en-android-con-kotlin-implementando-retrofit-corrutinas-y-clean-architecture/) [:video_camera:](https://youtu.be/7FptmAjBdsA) - Segunda versión de MVVM, donde hemos añadido peticiones en red consumiendo un API con Retrofit 2 y corrutinas. También hemos añadido __Clean Architecture__. [__CleanRetrofit__](https://github.com/Jose-Vela/MVVM-App/tree/feature/cleanRetrofit)
 
 Este es un proyecto propuesto por __AristiDevs__, en una serie de tutoriales sobre [__Arquitectura MVVM para proyectos de Android con Kotlin__](https://youtube.com/playlist?list=PL8ie04dqq7_MvhtWlcIFS9L3_4EWatd-V)
 
