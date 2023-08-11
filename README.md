@@ -13,6 +13,8 @@ _Para acceder a los tutoriales por escrito deberás dar clic en el enlace al ini
 
 - [Persistencia de datos con ROOM](https://cursokotlin.com/capitulo-17-persistencia-de-datos-con-room/)  [:page_facing_up:](https://cursokotlin.com/capitulo-17-persistencia-de-datos-con-room/) [:video_camera:](https://youtu.be/lYBb4QedYH8) - Cuarta versión de MVVM, se implementó persistencia de datos con el OMR de Google __Room__. Código en la rama: [__feature/room__](https://github.com/Jose-Vela/MVVM-App/tree/feature/room)
 
+- [Testing en Android con MVVM (Unit Test)](https://cursokotlin.com/testing-en-android---test-unitarios/) [:page_facing_up:](https://cursokotlin.com/testing-en-android---test-unitarios/) [:video_camera:](https://youtu.be/xCjIJMydI3s) - Quinta versión de MVVM, dónde se implementó __Testing Unitario__ desde cero. Código en la rama: [__feature/unitTests__](https://github.com/Jose-Vela/MVVM-App/tree/feature/unitTests)
+
 Este es un proyecto propuesto por __AristiDevs__, en una serie de tutoriales sobre [__Arquitectura MVVM para proyectos de Android con Kotlin__](https://youtube.com/playlist?list=PL8ie04dqq7_MvhtWlcIFS9L3_4EWatd-V)
 
 Si prefieres consumir más de su contenido, puedes visitar su [canal de YouTube:](https://www.youtube.com/@AristiDevs)
