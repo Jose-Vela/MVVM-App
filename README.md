@@ -1,7 +1,9 @@
 # MVVM-App
 
-<p align="center">
-      <img src="https://cursokotlin.com/wp-content/uploads/2021/04/thumbnail-1200x500.jpg">
+<p  align="center">
+    <a href="https://cursokotlin.com/mvvm-en-android-con-kotlin-livedata-y-view-binding-android-architecture-components/">
+        <img src="https://cursokotlin.com/wp-content/uploads/2021/04/thumbnail-1200x500.jpg">
+    </a>
   </p>
 
 Proyecto MVVM para Android en Kotlin, obtenido de los capítulos de [cursokotlin.com](https://cursokotlin.com/). Cada rama pertenece a un capítulo, el cual se explica a fondo en los tutoriales por escrito o por video.
